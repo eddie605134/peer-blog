@@ -8,7 +8,7 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS } from "@config";
+import { SOCIALS, SELF_INTRODUCTION, SUB_INFO } from "@config";
 
 const posts = await getCollection("blog");
 
@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Introduction</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,19 +42,28 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        {
+          SELF_INTRODUCTION.split("，").map((intro, index) => (
+            <>
+              <span>
+                {intro}
+                {index < SELF_INTRODUCTION.split("，").length - 1 && "，"}
+              </span>
+              <br />
+            </>
+          ))
+        }
       </p>
-      <p>
-        Read the blog posts or check
-        <LinkButton
+      <p class="mt-6">
+        <span class="text-sm text-sky-400 bg-gray-200 p-1 rounded">
+          {SUB_INFO}
+        </span>
+        <!-- <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
           href="https://github.com/satnaing/astro-paper#readme"
         >
           README
-        </LinkButton> for more info.
+        </LinkButton> for more info. -->
       </p>
       {
         // only display if at least one social link is enabled
@@ -127,10 +136,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <style>
   /* ===== Hero Section ===== */
   #hero {
-    @apply pb-6 pt-8;
+    @apply pb-6 pt-1;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply my-2 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
   }
   #hero .rss-link {
     @apply mb-6;
