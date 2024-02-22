@@ -123,7 +123,7 @@ You can easily add your [Google Site Verification HTML tag](https://support.goog
 PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-site-verification-value
 ```
 
-## 🧞 Commands
+## 🧞 Commands and Commands
 
 All commands are run from the root of the project, from a terminal:
 
