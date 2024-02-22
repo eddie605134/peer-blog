@@ -7,3 +7,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_GOOGLE_SITE_VERIFICATION: string;
   // more env variables...
 }
+
+interface Window {
+  dataLayer: IArguments[];
+}
