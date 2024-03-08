@@ -1,9 +1,8 @@
 ---
-author: Eddie
-pubDatetime: 2024-03-08T17:34:00Z
-modDatetime: 2024-03-08T19:12:47.400Z
 title: 面試題目整理-2024-03
-slug: interview
+author: Eddie
+pubDatetime: 2024-03-08T18:34:00Z
+slug: interview-1
 featured: true
 draft: false
 tags:
