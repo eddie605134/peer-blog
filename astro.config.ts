@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import partytown from "@astrojs/partytown";
 
-import vercel from "@astrojs/vercel/serverless";
+// import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -46,6 +46,11 @@ export default defineConfig({
   },
   scopedStyleStrategy: "where",
 
-  output: "server",
-  adapter: vercel(),
+  // output: "server",
+  // adapter: vercel({
+  //   webAnalytics: {
+  //     enabled: true,
+  //   },
+  //   maxDuration: 8,
+  // }),
 });
