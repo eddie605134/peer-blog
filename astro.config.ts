@@ -7,6 +7,8 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import partytown from "@astrojs/partytown";
 
+import vercelStatic from "@astrojs/vercel/static";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -43,4 +45,7 @@ export default defineConfig({
     },
   },
   scopedStyleStrategy: "where",
+
+  output: "static",
+  adapter: vercelStatic(),
 });
