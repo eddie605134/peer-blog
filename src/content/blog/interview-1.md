@@ -2,8 +2,8 @@
 author: Eddie
 pubDatetime: 2024-03-08T17:34:00Z
 modDatetime: 2024-03-08T19:12:47.400Z
-title: 2024年2~3月面試題目整理
-slug: interview-2024-03
+title: 面試題目整理-2024-03
+slug: interview
 featured: true
 draft: false
 tags:
